@@ -12,6 +12,8 @@
   <depend>raspimouse</depend>
   <depend>raspimouse_msgs</depend>
   <depend>raspimouse_description</depend>
+  <depend>rplidar_ros</depend>
+  <depend>raspimouse_bringup</depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>

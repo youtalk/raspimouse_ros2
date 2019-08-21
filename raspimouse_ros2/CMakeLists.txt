@@ -20,6 +20,8 @@ find_package(ament_cmake REQUIRED)
 find_package(raspimouse REQUIRED)
 find_package(raspimouse_msgs REQUIRED)
 find_package(raspimouse_description REQUIRED)
+find_package(rplidar_ros REQUIRED)
+find_package(raspimouse_bringup REQUIRED)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
