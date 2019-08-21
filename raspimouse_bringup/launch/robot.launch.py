@@ -27,13 +27,25 @@ from launch_ros.actions import Node
 
 
 def generate_launch_description():
+    urdf = os.path.join(
+        get_package_share_directory('raspimouse_description'),
+        'urdf', 'raspimouse.urdf')
+
     return LaunchDescription([
         Node(
             package='raspimouse',
             node_executable='raspimouse',
+            node_name='raspimouse_driver',
             output='screen'),
         Node(
             package='rplidar_ros',
             node_executable='rplidar_node',
+            node_name='raspimouse_rplidar_driver',
             output='screen'),
+        Node(
+            package='robot_state_publisher',
+            node_executable='robot_state_publisher',
+            node_name='raspimouse_robot_state_publisher',
+            output='screen',
+            arguments=[urdf]),
     ])

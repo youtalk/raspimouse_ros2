@@ -23,6 +23,7 @@ find_package(raspimouse_description REQUIRED)
 find_package(rplidar_ros REQUIRED)
 find_package(teleop_twist_joy REQUIRED)
 find_package(teleop_twist_keyboard REQUIRED)
+find_package(robot_state_publisher REQUIRED)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
