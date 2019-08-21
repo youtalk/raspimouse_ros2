@@ -16,6 +16,7 @@
   <depend>rplidar_ros</depend>
   <depend>teleop_twist_joy</depend>
   <depend>teleop_twist_keyboard</depend>
+  <depend>tf2_ros</depend>
   <depend>robot_state_publisher</depend>
 
   <test_depend>ament_lint_auto</test_depend>

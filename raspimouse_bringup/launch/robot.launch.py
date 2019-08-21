@@ -43,6 +43,13 @@ def generate_launch_description():
             node_name='raspimouse_rplidar_driver',
             output='screen'),
         Node(
+            package='tf2_ros',
+            node_executable='static_transform_publisher',
+            node_name='raspimouse_base_to_laser',
+            arguments=['0', '0', '0.135', '0', '0' '0',
+                       'base_link', 'laser_frame'],
+            output='screen'),
+        Node(
             package='robot_state_publisher',
             node_executable='robot_state_publisher',
             node_name='raspimouse_robot_state_publisher',
