@@ -1,0 +1,9 @@
+[submodule "raspimouse_driver"]
+	path = raspimouse_driver
+	url = git@github.com:youtalk/raspimouse2.git
+[submodule "rplidar_driver"]
+	path = rplidar_driver
+	url = git@github.com:youtalk/rplidar_ros.git
+[submodule "raspimouse_simulation"]
+	path = raspimouse_simulation
+	url = git@github.com:youtalk/raspimouse_sim.git
