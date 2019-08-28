@@ -9,14 +9,15 @@
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
-  <depend>raspimouse</depend>
-  <depend>raspimouse_msgs</depend>
-  <depend>raspimouse_description</depend>
-  <depend>rplidar_ros</depend>
-  <depend>teleop_twist_joy</depend>
-  <depend>teleop_twist_keyboard</depend>
-  <depend>tf2_ros</depend>
-  <depend>robot_state_publisher</depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>raspimouse</exec_depend>
+  <exec_depend>raspimouse_msgs</exec_depend>
+  <exec_depend>raspimouse_description</exec_depend>
+  <exec_depend>rplidar_ros</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>teleop_twist_joy</exec_depend>
+  <exec_depend>teleop_twist_keyboard</exec_depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
