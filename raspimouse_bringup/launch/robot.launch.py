@@ -47,7 +47,7 @@ def generate_launch_description():
             package='tf2_ros',
             node_executable='static_transform_publisher',
             node_name='raspimouse_base_to_laser',
-            arguments=['0', '0', '0.135', '0', '0', str(math.pi),
+            arguments=['0', '0', '0.135', str(math.pi), '0', '0',
                        'base_link', 'laser_frame'],
             output='screen'),
         Node(
