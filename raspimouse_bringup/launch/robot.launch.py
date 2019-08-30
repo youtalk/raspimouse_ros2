@@ -37,6 +37,8 @@ def generate_launch_description():
             package='raspimouse',
             node_executable='raspimouse',
             node_name='raspimouse_driver',
+            parameters=[{'use_pulse_counters': True,
+                         'use_light_sensors': True}]),
             output='screen'),
         Node(
             package='rplidar_ros',
