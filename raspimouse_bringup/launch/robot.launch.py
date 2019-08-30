@@ -28,17 +28,27 @@ from launch_ros.actions import Node
 
 
 def generate_launch_description():
+    use_pulse_counters = LaunchConfiguration('use_pulse_counters', default='true')
+    use_light_sensors = LaunchConfiguration('use_light_sensors', default='false')
     urdf = os.path.join(
         get_package_share_directory('raspimouse_description'),
         'urdf', 'raspimouse.urdf')
 
     return LaunchDescription([
+        DeclareLaunchArgument(
+            'use_pulse_counters',
+            default_value='true',
+            description='Use pulse counters if true'),
+        DeclareLaunchArgument(
+            'use_light_sensors',
+            default_value='false',
+            description='Use light sensors if true'),
         Node(
             package='raspimouse',
             node_executable='raspimouse',
             node_name='raspimouse_driver',
-            parameters=[{'use_pulse_counters': True,
-                         'use_light_sensors': True}],
+            parameters=[{'use_pulse_counters': use_pulse_counters,
+                         'use_light_sensors': use_light_sensors}],
             output='screen'),
         Node(
             package='rplidar_ros',
