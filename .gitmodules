@@ -7,3 +7,6 @@
 [submodule "raspimouse_simulation"]
 	path = raspimouse_simulation
 	url = git@github.com:youtalk/raspimouse_sim.git
+[submodule "cartographer_ros"]
+	path = cartographer_ros
+	url = git@github.com:ROBOTIS-GIT/cartographer_ros.git
