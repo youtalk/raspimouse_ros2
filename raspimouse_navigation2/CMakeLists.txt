@@ -17,9 +17,6 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
-find_package(navigation2 REQUIRED)
-find_package(rviz2 REQUIRED)
-find_package(launch_ros REQUIRED)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -31,5 +28,10 @@ if(BUILD_TESTING)
   #set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()
+
+install(DIRECTORY
+  launch config map
+  DESTINATION share/${PROJECT_NAME}/
+)
 
 ament_package()
