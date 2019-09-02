@@ -33,13 +33,12 @@ def generate_launch_description():
             'map',
             'map.yaml'))
 
-    param_file_name = 'raspimouse.yaml'
     param_dir = LaunchConfiguration(
         'params',
         default=os.path.join(
             get_package_share_directory('raspimouse_navigation2'),
             'config',
-            param_file_name))
+            'raspimouse_rplidar_a1m8.yaml'))
 
     nav2_launch_dir = os.path.join(get_package_share_directory('nav2_bringup'), 'launch')
 
