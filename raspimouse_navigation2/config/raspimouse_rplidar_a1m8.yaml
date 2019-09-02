@@ -64,7 +64,7 @@ dwb_controller:
     max_speed_xy: 0.22
     min_speed_theta: 0.0
     min_x_velocity_threshold: 0.001
-    min_y_velocity_threshold: 0.001
+    min_y_velocity_threshold: 0.1
     min_theta_velocity_threshold: 0.001
     acc_lim_x: 2.5
     acc_lim_y: 0.0
