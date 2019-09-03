@@ -4,7 +4,6 @@ ROS 2 navigation pakcages for Raspberry Pi Mouse v3
 ## OS and ROS 2 set up
 
 First of all, you need to install Ubuntu 18.04 and ROS 2 Dashing Diademata on your Raspberry Pi 3 B+ and PC.
-
 Please refer the official ROS 2 installation process: https://index.ros.org/doc/ros2/Installation/Crystal/Linux-Install-Binary/
 
 ## Package build for Raspberry Pi 3 B+
@@ -51,6 +50,8 @@ source ~/ros/dashing/install/setup.bash
 
 ## Keyboard teleoperation
 
+Run Raspberry Pi Mouse and RPLiDAR A1M8 drivers.
+
 ### Raspberry Pi 3 B+
 
 ```
@@ -59,7 +60,7 @@ ros2 launch raspimouse_bringup robot.launch.py
 
 ### PC
 
-Enable Raspberry Pi Mouse
+Enable Raspberry Pi Mouse.
 
 ```
 ros2 lifecycle set raspimouse_driver configure && \
@@ -67,14 +68,57 @@ ros2 lifecycle set raspimouse_driver activate && \
 ros2 service call /motor_power std_srvs/SetBool '{data: true}'
 ```
 
-Run Rviz2
+Run Rviz2.
 
 ```
 ros2 launch raspimouse_bringup rviz2.launch.py
 ```
 
-Run teleop_twist_keyboard
+Run `teleop_twist_keyboard`.
 
 ```
 ros2 run teleop_twist_keyboard teleop_twist_keyboard
 ```
+
+## Cartographer SLAM
+
+### Raspberry Pi 3 B+
+
+Do same as above.
+
+### PC
+
+Do same as above.
+Then move around while recording bag file for SLAM.
+
+```
+sudo apt install 'ros-dashing-ros2bag*' 'ros-dashing-rosbag2
+ros2 bag record -a -o ./raspimouse_slam.bag
+```
+
+Run `raspimouse_cartographer`.
+
+```
+ros2 launch raspimouse_cartographer cartographer.launch.py
+```
+
+Play bag file recorded before.
+
+```
+ros2 bag play ~/raspimouse_slam.bag
+```
+
+Save map files if the quaility of the map on RViz2 is acceptable.
+
+```
+ros2 run nav2_map_server map_saver -f ~/.ros/map
+```
+
+Note that a sample bag file and map data are stored following directories.
+
+- Bag file: https://github.com/youtalk/raspimouse_bags/tree/master/raspimouse_slam.bag
+- Map data: https://github.com/youtalk/raspimouse_ros2/tree/master/raspimouse_navigation2/map
+
+## Navigation 2
+
+TBA
