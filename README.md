@@ -103,7 +103,7 @@ First do the same as above.
 Then move around a floor while recording the bag file for SLAM data.
 
 ```
-sudo apt install 'ros-dashing-ros2bag*' 'ros-dashing-rosbag2
+sudo apt install 'ros-dashing-ros2bag*' 'ros-dashing-rosbag2*'
 ros2 bag record -a -o ./raspimouse_slam.bag
 ```
 
