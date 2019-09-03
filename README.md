@@ -68,7 +68,7 @@ ros2 launch raspimouse_bringup robot.launch.py
 ```
 
 Note that the default linear speed is too fast.
-Please decrease the linear speed to 0.15 [m/s] by pressing `x` key several times.
+Please decrease the linear speed to 0.15 [m/s] or lower by pressing `x` key several times.
 
 ### PC
 
