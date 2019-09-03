@@ -3,10 +3,10 @@ ROS 2 navigation pakcages for Raspberry Pi Mouse V3
 
 ## OS and ROS 2 set up
 
-First of all, you need to install Ubuntu 18.04 and ROS 2 Dashing Diademata on your Raspberry Pi 3 B+ and PC.
+First of all, you need to install Ubuntu 18.04 and ROS 2 Dashing Diademata on your Raspberry Pi 3 B and PC.
 Please refer the official ROS 2 installation process: https://index.ros.org/doc/ros2/Installation/Crystal/Linux-Install-Binary/
 
-## Package build for Raspberry Pi 3 B+
+## Package build for Raspberry Pi 3 B
 
 ### Raspberry Pi Mouse driver installation
 
@@ -52,7 +52,7 @@ source ~/ros/dashing/install/setup.bash
 
 Run Raspberry Pi Mouse and RPLiDAR A1M8 drivers.
 
-### Raspberry Pi 3 B+
+### Raspberry Pi 3 B
 
 ```
 ros2 launch raspimouse_bringup robot.launch.py
@@ -82,7 +82,7 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard
 
 ## Cartographer SLAM
 
-### Raspberry Pi 3 B+
+### Raspberry Pi 3 B
 
 Do the same as above.
 
