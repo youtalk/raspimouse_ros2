@@ -1,6 +1,6 @@
 [submodule "raspimouse_driver"]
 	path = raspimouse_driver
-	url = git@github.com:youtalk/raspimouse2.git
+	url = git@github.com:gbiggs/raspimouse2.git
 [submodule "rplidar_driver"]
 	path = rplidar_driver
 	url = git@github.com:youtalk/rplidar_ros.git
