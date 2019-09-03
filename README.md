@@ -84,25 +84,25 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard
 
 ### Raspberry Pi 3 B+
 
-Do same as above.
+Do the same as above.
 
 ### PC
 
-Do same as above.
-Then move around while recording bag file for SLAM.
+First do the same as above.
+Then move around a floor while recording the bag file for SLAM data.
 
 ```
 sudo apt install 'ros-dashing-ros2bag*' 'ros-dashing-rosbag2
 ros2 bag record -a -o ./raspimouse_slam.bag
 ```
 
-Run `raspimouse_cartographer`.
+Run `raspimouse_cartographer` to generate 2D map.
 
 ```
 ros2 launch raspimouse_cartographer cartographer.launch.py
 ```
 
-Play bag file recorded before.
+Play the bag file recorded before.
 
 ```
 ros2 bag play ~/raspimouse_slam.bag
