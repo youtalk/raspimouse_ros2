@@ -26,7 +26,6 @@ make
 sudo make install
 sudo insmod rtmouse.ko
 sudo usermod -aG dialout $USER
-sudo chmod 666 /dev/rt*
 ```
 
 ### raspimouse_ros2 build
