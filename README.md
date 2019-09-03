@@ -66,9 +66,6 @@ Run Raspberry Pi Mouse and RPLiDAR A1M8 drivers.
 ros2 launch raspimouse_bringup robot.launch.py
 ```
 
-Note that the default linear speed is too fast.
-Please decrease the linear speed to 0.15 [m/s] or lower by pressing `x` key several times.
-
 ### PC
 
 Enable Raspberry Pi Mouse.
@@ -90,6 +87,9 @@ Run `teleop_twist_keyboard`.
 ```
 ros2 run teleop_twist_keyboard teleop_twist_keyboard
 ```
+
+Note that the default linear speed is too fast.
+Please decrease the linear speed to 0.15 [m/s] or lower by pressing `x` key several times.
 
 ## Cartographer SLAM
 
