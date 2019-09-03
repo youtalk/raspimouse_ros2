@@ -1,5 +1,5 @@
 # raspimouse_ros2
-ROS 2 navigation pakcages for Raspberry Pi Mouse v3
+ROS 2 navigation pakcages for Raspberry Pi Mouse V3
 
 ## OS and ROS 2 set up
 
