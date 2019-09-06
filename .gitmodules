@@ -9,7 +9,7 @@
 	url = git@github.com:youtalk/raspimouse_sim.git
 [submodule "cartographer_ros"]
 	path = cartographer_ros
-	url = git@github.com:ROBOTIS-GIT/cartographer_ros.git
+	url = git@github.com:youtalk/cartographer_ros.git
 [submodule "raspimouse_bags"]
 	path = raspimouse_bags
 	url = git@github.com:youtalk/raspimouse_bags.git
