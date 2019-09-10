@@ -6,6 +6,14 @@ ROS 2 navigation pakcages for Raspberry Pi Mouse V3
 First of all, you need to install Ubuntu 18.04 and ROS 2 Dashing Diademata on your Raspberry Pi 3 B and PC.
 Please refer the official ROS 2 installation process: https://index.ros.org/doc/ros2/Installation/Crystal/Linux-Install-Binary/
 
+### `colcon` and `rosdep` set up
+
+```
+sudo apt install python3-colcon-common-extensions python3-rosdep python3-argcomplete
+sudo rosdep init
+rosdep update
+```
+
 ### `ROS_DOMAIN_ID` network configuration
 
 Set the environmental variable `ROS_DOMAIN_ID` to specify your network configuration.
