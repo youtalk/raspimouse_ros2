@@ -41,7 +41,7 @@ sudo usermod -aG dialout $USER
 ```
 mkdir -p ~/ros/dashing/src
 cd ~/ros/dashing/src
-git clone git@github.com:youtalk/raspimouse_ros2.git -b ignore-cartographer-navigation2
+git clone https://github.com/youtalk/raspimouse_ros2.git -b ignore-cartographer-navigation2
 git submodule update --init
 cd ..
 rosdep install --from-paths src --ignore-src -r -y
@@ -56,7 +56,7 @@ source ~/ros/dashing/install/setup.bash
 ```
 mkdir -p ~/ros/dashing/src
 cd ~/ros/dashing/src
-git clone git@github.com:youtalk/raspimouse_ros2.git
+git clone https://github.com/youtalk/raspimouse_ros2.git
 git submodule update --init
 cd ..
 rosdep install --from-paths src --ignore-src -r -y
