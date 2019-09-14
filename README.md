@@ -127,7 +127,7 @@ Play the bag file recorded before.
 ros2 bag play ~/raspimouse_slam.bag
 ```
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/OUnz8rO132Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![ROS 2 Cartographer SLAM with RasPi Mouse and RPLiDAR A1M8](https://img.youtube.com/vi/OUnz8rO132Q/0.jpg)](https://www.youtube.com/watch?v=OUnz8rO132Q)
 
 Save map files if the quaility of the map on RViz2 is acceptable.
 
@@ -154,4 +154,4 @@ Note that please wait seconds to complete launching navigation nodes.
 Press `2D Pose Estimate` button to initialize the robot pose. Then Press `Navigation2 Goal` to give the goal pose.
 The robot will start moving along the path to the goal pose.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/iDeybhXFpAI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![ROS 2 Navigation with RasPi Mouse and RPLiDAR A1M8](https://img.youtube.com/vi/iDeybhXFpAI/0.jpg)](https://www.youtube.com/watch?v=iDeybhXFpAI)
