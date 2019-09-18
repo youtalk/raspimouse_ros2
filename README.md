@@ -42,8 +42,9 @@ sudo usermod -aG dialout $USER
 mkdir -p ~/ros/dashing/src
 cd ~/ros/dashing/src
 git clone https://github.com/youtalk/raspimouse_ros2.git -b ignore-cartographer-navigation2
+cd raspimouse_ros2
 git submodule update --init
-cd ..
+cd ../..
 rosdep install --from-paths src --ignore-src -r -y
 colcon build --symlink-install
 source ~/ros/dashing/install/setup.bash
@@ -57,8 +58,9 @@ source ~/ros/dashing/install/setup.bash
 mkdir -p ~/ros/dashing/src
 cd ~/ros/dashing/src
 git clone https://github.com/youtalk/raspimouse_ros2.git
+cd raspimouse_ros2
 git submodule update --init
-cd ..
+cd ../..
 rosdep install --from-paths src --ignore-src -r -y
 colcon build --symlink-install
 source ~/ros/dashing/install/setup.bash
