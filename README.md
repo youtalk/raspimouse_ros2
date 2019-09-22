@@ -41,9 +41,10 @@ sudo usermod -aG dialout $USER
 ```
 mkdir -p ~/ros/dashing/src
 cd ~/ros/dashing/src
-git clone git@github.com:youtalk/raspimouse_ros2.git -b ignore-cartographer-navigation2
+git clone https://github.com/youtalk/raspimouse_ros2.git -b ignore-cartographer-navigation2
+cd raspimouse_ros2
 git submodule update --init
-cd ..
+cd ../..
 rosdep install --from-paths src --ignore-src -r -y
 colcon build --symlink-install
 source ~/ros/dashing/install/setup.bash
@@ -56,9 +57,10 @@ source ~/ros/dashing/install/setup.bash
 ```
 mkdir -p ~/ros/dashing/src
 cd ~/ros/dashing/src
-git clone git@github.com:youtalk/raspimouse_ros2.git
+git clone https://github.com/youtalk/raspimouse_ros2.git
+cd raspimouse_ros2
 git submodule update --init
-cd ..
+cd ../..
 rosdep install --from-paths src --ignore-src -r -y
 colcon build --symlink-install
 source ~/ros/dashing/install/setup.bash
@@ -127,6 +129,8 @@ Play the bag file recorded before.
 ros2 bag play ~/raspimouse_slam.bag
 ```
 
+[![ROS 2 Cartographer SLAM with RasPi Mouse and RPLiDAR A1M8](https://img.youtube.com/vi/OUnz8rO132Q/0.jpg)](https://www.youtube.com/watch?v=OUnz8rO132Q)
+
 Save map files if the quaility of the map on RViz2 is acceptable.
 
 ```
@@ -140,4 +144,20 @@ Note that a sample bag file and map data are stored following directories.
 
 ## Navigation 2
 
-TBA
+### Raspberry Pi 3 B
+
+Do the same as above.
+
+### PC
+
+Run `raspimouse_navigation2` to launch RViz2 with the navigation configuration.
+Note that please wait seconds to complete launching navigation nodes.
+
+```
+ros2 launch raspimouse_navigation2 navigation2.launch.py map:=~/.ros/map/map.yaml
+```
+
+Press `2D Pose Estimate` button to initialize the robot pose. Then Press `Navigation2 Goal` to give the goal pose.
+The robot will start moving along the path to the goal pose.
+
+[![ROS 2 Navigation with RasPi Mouse and RPLiDAR A1M8](https://img.youtube.com/vi/iDeybhXFpAI/0.jpg)](https://www.youtube.com/watch?v=iDeybhXFpAI)
