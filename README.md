@@ -154,7 +154,7 @@ Run `raspimouse_navigation2` to launch RViz2 with the navigation configuration.
 Note that please wait seconds to complete launching navigation nodes.
 
 ```
-ros2 launch raspimouse_navigation2 navigation2.launch.py map:=~/.ros/map/map.yaml
+ros2 launch raspimouse_navigation2 navigation2.launch.py map:=/home/$USER/.ros/map.yaml
 ```
 
 Press `2D Pose Estimate` button to initialize the robot pose. Then Press `Navigation2 Goal` to give the goal pose.
